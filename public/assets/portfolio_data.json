@@ -1,0 +1,52 @@
+{
+    "basic_info": {
+      "name": "Dagim Asrat",
+      "bio": "A passionate problem solver.",
+      "email": "dagimasrat3@gmail.com",
+      "phone": "251-913-101-699",
+      "social_links": {
+        "linkedin": "https://www.linkedin.com/in/dagimasrat/",
+        "github": "https://github.com/dag14"
+      },
+      "animation_text": [
+        "Frontend developer",
+        1000,
+        "devops engineer",
+        1000,
+        "azure cloud engineer",
+        2000
+      ]
+    },
+    "skills": [
+      "JavaScript",
+      "TailwindCSS",
+      "React",
+      "Node.js",
+      "CSS",
+      "Docker",
+      "ACA",
+      "Azure"
+    ],
+    "projects": [
+      {
+        "name": "Portfolio Website",
+        "description": "A personal portfolio to showcase projects."
+      },
+      {
+        "name": "Weather App",
+        "description": "A weather app built with React."
+      }
+    ],
+    "experience": [
+      {
+        "company": "ABC Corp",
+        "position": "Frontend Developer",
+        "duration": "2019-2021",
+        "responsibilities": [
+          "Developed and maintained the company's website.",
+          "Collaborated with UX/UI designers."
+        ]
+      }
+    ]
+  }
+  

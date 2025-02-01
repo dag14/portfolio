@@ -16,7 +16,7 @@ export default {
         'accent-silver': '#C0C0C0', // Subtle details, hover effects, or borders
 
         // Supporting Colors
-        'bg-light-gray': '#F4F4F4', // Main background or card sections
+        'bg-main-card': '#E9D5A1', // Main background or card sections
         'text-dark-gray': '#333333', // Darker text for readability
 
         // Hover & Secondary
