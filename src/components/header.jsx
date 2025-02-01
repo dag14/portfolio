@@ -35,7 +35,8 @@ const Header = ({ sharedData }) => {
   return (
     <header className="h-50px flex items-center justify-center">
       <div className="text-center">
-        <div className="my-5 text-xl text-text-charcoal-gray uppercase">
+        {/* Fixed height container for TypeAnimation */}
+        <div className="my-5 text-xl text-text-charcoal-gray uppercase h-[50px] flex items-center justify-center">
           {animationText.length > 0 && (
             <TypeAnimation
               sequence={animationText}

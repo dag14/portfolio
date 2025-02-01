@@ -13,19 +13,18 @@ const Landing = () => {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center w-screen h-screen bg-bg-main-card">
+    <div className="flex flex-col justify-center  w-screen h-screen bg-bg-main-card">
       <div className="flex-col">
-        <FaLaptopCode
-          size={130}
-          className="flex justify-center m-2 text-text-charcoal-gray"
-        />
+        <div className="flex justify-center">
+          <FaLaptopCode size={150} />
+        </div>
+        <h1 className="flex justify-center text-4xl font-semibold">
+          {portfolioData?.name || "Loading..."}
+        </h1>
       </div>
-
-      <h1 className="flex justify-center text-4xl font-semibold">
-        {portfolioData?.name || "Loading..."}
-      </h1>
-
-      <Header sharedData={portfolioData} className="h-50px" />
+      <div>
+        <Header sharedData={portfolioData} className="h-50px" />
+      </div>
     </div>
   );
 };
