@@ -10,12 +10,18 @@
       },
       "animation_text": [
         "Frontend developer",
+        2000,
+        "Frontend developer",
         1000,
         "devops engineer",
         1000,
         "azure cloud engineer",
-        2000
-      ]
+        1000,
+        "network engineer",
+        500
+      ],
+      "image": "myProfile.png"
+
     },
     "skills": [
       "JavaScript",

@@ -1,19 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { FaLaptopCode } from "react-icons/fa";
 import Header from "./header";
 
-const Landing = () => {
-  const [portfolioData, setPortfolioData] = useState(null);
-
-  useEffect(() => {
-    fetch("/assets/portfolio_data.json")
-      .then((response) => response.json())
-      .then((data) => setPortfolioData(data.basic_info))
-      .catch((error) => console.error("Error loading portfolio data:", error));
-  }, []);
-
+const Landing = ({ portfolioData }) => {
   return (
-    <div className="flex flex-col justify-center  w-screen h-screen bg-bg-main-card">
+    <div className="flex flex-col justify-center w-full h-screen bg-bg-main-card">
       <div className="flex-col">
         <div className="flex justify-center">
           <FaLaptopCode size={150} />
@@ -23,6 +14,7 @@ const Landing = () => {
         </h1>
       </div>
       <div>
+        {/* Pass portfolioData to Header */}
         <Header sharedData={portfolioData} className="h-50px" />
       </div>
     </div>
