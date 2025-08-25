@@ -26,9 +26,9 @@ export function Navigation() {
   }, []);
 
   const handleDownloadCV = () => {
-    // Create a CV download link - you can replace this with actual CV file
+    // I'll create a CV download link
     const link = document.createElement('a');
-    link.href = '/cv-dagim-asrat.pdf'; // Add your CV file to public folder
+    link.href = '../../src/assets/Dagim_Asrat_CV.pdf'; 
     link.download = 'Dagim_Asrat_CV.pdf';
     document.body.appendChild(link);
     link.click();
@@ -55,7 +55,7 @@ export function Navigation() {
             className="flex items-center"
           >
             <img 
-              src="/src/assets/dagim-avatar.jpg" 
+              src="/src/assets/dagim-avatar.png" 
               alt="Dagim Asrat" 
               className="w-8 h-8 rounded-full border-2 border-primary/20"
             />

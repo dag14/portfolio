@@ -72,8 +72,7 @@ export function Footer() {
             transition={{ delay: 0.2 }}
             className="text-center md:text-right"
           >
-            <p className="text-sm text-muted-foreground flex items-center justify-center md:justify-end">
-              Made with <Heart className="h-4 w-4 mx-1 text-primary" fill="currentColor" /> 
+            <p className="text-sm text-muted-foreground flex items-center justify-center md:justify-end"> 
               © {currentYear} Dagim Asrat
             </p>
             <p className="text-xs text-muted-foreground mt-1">
