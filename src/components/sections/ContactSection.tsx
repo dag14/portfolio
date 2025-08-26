@@ -10,10 +10,10 @@ import {
   Download,
   Send,
   Clock,
-  MessageCircle,
   Twitter,
   Instagram
 } from 'lucide-react';
+import { RxDiscordLogo } from 'react-icons/rx';
 
 export function ContactSection() {
   const containerVariants = {
@@ -37,15 +37,7 @@ export function ContactSection() {
     }
   };
 
-  const handleDownloadCV = () => {
-    // Create a CV download link
-    const link = document.createElement('a');
-    link.href = '/cv-dagim-asrat.pdf';
-    link.download = 'Dagim_Asrat_CV.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+
 
   return (
     <section id="contact" className="py-20 lg:py-32 section-padding">
@@ -197,7 +189,7 @@ export function ContactSection() {
                       target="_blank" 
                       rel="noopener noreferrer"
                     >
-                      <MessageCircle className="h-5 w-5" />
+                      <RxDiscordLogo className="h-5 w-5" />
                     </a>
                   </Button>
                   <Button
@@ -235,39 +227,39 @@ export function ContactSection() {
             {/* Call to Action */}
             <motion.div variants={itemVariants} className="space-y-8">
               <Card className="glass-morphism">
-                <CardContent className="p-8 text-center space-y-6">
-                  <div className="space-y-4">
-                    <h3 className="text-2xl font-bold text-gradient">Ready to Start a Project?</h3>
-                    <p className="text-muted-foreground">
-                      I'm available for freelance work, consulting, and full-time opportunities. 
-                      Let's discuss how we can bring your ideas to life.
-                    </p>
-                  </div>
+  <CardContent className="p-8 text-center space-y-6">
+    <div className="space-y-4">
+      <h3 className="text-2xl font-bold text-gradient">Ready to Start a Project?</h3>
+      <p className="text-muted-foreground">
+        I'm available for freelance work, consulting, and full-time opportunities. 
+        Let's discuss how we can bring your ideas to life.
+      </p>
+    </div>
 
-                  <div className="space-y-4">
-                    <Button 
-                      asChild 
-                      className="btn-primary w-full"
-                      size="lg"
-                    >
-                      <a href="mailto:dagimasrat3@gmail.com">
-                        <Send className="h-5 w-5 mr-2" />
-                        Send a Message
-                      </a>
-                    </Button>
-                    
-                    <Button 
-                      onClick={handleDownloadCV}
-                      variant="ghost" 
-                      className="btn-ghost w-full"
-                      size="lg"
-                    >
-                      <Download className="h-5 w-5 mr-2" />
-                      Download My CV
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
+    <div className="space-y-4">
+      {/* Message input field */}
+      <textarea
+        className="w-full p-3 rounded-md border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+        placeholder="Write your message here..."
+        rows={4}
+      />
+
+      {/* Send button */}
+      <Button 
+        asChild 
+        className="btn-primary w-full"
+        size="lg"
+      >
+        <a href="mailto:dagimasrat3@gmail.com">
+          <Send className="h-5 w-5 mr-2" />
+          Send a Message
+        </a>
+      </Button>
+    </div>
+  </CardContent>
+</Card>
+
+
 
               {/* Availability Status */}
               <Card className="glass-morphism">
