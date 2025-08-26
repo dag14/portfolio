@@ -161,11 +161,11 @@ export function HeroSection() {
             <div className="relative">
               <div className="w-96 h-96 rounded-full bg-gradient-hero backdrop-blur-sm border border-primary/20 flex items-center justify-center">
                 <div className="text-center space-y-4">
-                  <div className="text-6xl font-bold text-gradient">+3</div>
-                  <div className="text-lg text-muted-foreground">Years of Experience</div>
+                  <div className="text-6xl font-bold text-gradient">4+</div>
+                  <div className="text-lg text-muted-foreground">Years of Development Experience</div>
                   <div className="grid grid-cols-2 gap-4 mt-8">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-primary">15+</div>
+                      <div className="text-2xl font-bold text-primary">6</div>
                       <div className="text-sm text-muted-foreground">Projects</div>
                     </div>
                     <div className="text-center">

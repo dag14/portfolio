@@ -86,6 +86,7 @@ export function ExperienceSection() {
                         <h4 className="font-semibold text-foreground">Key Responsibilities:</h4>
                         <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
                           <li>Manage Azure cloud infrastructure and oversee database integration</li>
+                          <li>Manage Azure cloud infrastructure and ensure seamless system deployments</li>
                           <li>Configure CI/CD pipelines for automated deployment workflows</li>
                           <li>Implement self-hosted Apache Superset dashboards for data visualization</li>
                           <li>Contribute to planning and scheduling using Microsoft Project</li>
@@ -122,21 +123,21 @@ export function ExperienceSection() {
             <Card className="glass-morphism text-center group hover:scale-105 transition-transform duration-300">
               <CardContent className="p-6">
                 <div className="text-3xl font-bold text-gradient mb-2">2+</div>
-                <p className="text-muted-foreground">Years Experience</p>
+                <p className="text-muted-foreground">Years of Professional Experience</p>
               </CardContent>
             </Card>
             
             <Card className="glass-morphism text-center group hover:scale-105 transition-transform duration-300">
               <CardContent className="p-6">
-                <div className="text-3xl font-bold text-gradient mb-2">15+</div>
-                <p className="text-muted-foreground">Projects Completed</p>
+                <div className="text-3xl font-bold text-gradient mb-2">5</div>
+                <p className="text-muted-foreground">Real World Projects Completed</p>
               </CardContent>
             </Card>
             
             <Card className="glass-morphism text-center group hover:scale-105 transition-transform duration-300">
               <CardContent className="p-6">
-                <div className="text-3xl font-bold text-gradient mb-2">10+</div>
-                <p className="text-muted-foreground">Technologies Mastered</p>
+                <div className="text-3xl font-bold text-gradient mb-2">20+</div>
+                <p className="text-muted-foreground">Technologies and Tools</p>
               </CardContent>
             </Card>
           </motion.div>
