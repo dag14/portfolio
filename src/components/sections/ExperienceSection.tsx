@@ -85,11 +85,11 @@ export function ExperienceSection() {
                       <div className="space-y-3">
                         <h4 className="font-semibold text-foreground">Key Responsibilities:</h4>
                         <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
-                          <li>Manage Azure cloud infrastructure and oversee database integration</li>
+                          <li>Design and implement scalable software solutions</li>
                           <li>Manage Azure cloud infrastructure and ensure seamless system deployments</li>
-                          <li>Configure CI/CD pipelines for automated deployment workflows</li>
-                          <li>Implement self-hosted Apache Superset dashboards for data visualization</li>
-                          <li>Contribute to planning and scheduling using Microsoft Project</li>
+                          <li>Configure and manage CI pipelines for automated integration workflows</li>
+                          <li>Host data visualization tools and implement dashboards across different systems</li>
+                          <li>Plan, schedule, and manage projects to ensure timely and efficient project execution.</li>
                           <li>Work with hardware integration like RS232-enabled weighing machines</li>
                         </ul>
                       </div>

@@ -3,11 +3,11 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
 import { motion } from 'framer-motion';
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
-import { MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { TechParticles } from '../three/TechParticles';
 import { FloatingGeometry } from '../three/FloatingGeometry';
 import { useTheme } from '../ThemeProvider';
+import {RxDiscordLogo } from 'react-icons/rx'
 
 export function HeroSection() {
   const { effectiveTheme } = useTheme();
@@ -120,7 +120,7 @@ export function HeroSection() {
                 className="btn-ghost"
                 asChild
               >
-                <a href="https://github.com/Bit-dagim" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/dag14" target="_blank" rel="noopener noreferrer">
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
@@ -131,7 +131,7 @@ export function HeroSection() {
                 asChild
               >
                 <a href="https://discord.com/users/773498692888035339" target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="h-5 w-5" />
+                  <RxDiscordLogo  className="h-5 w-5" />
                 </a>
               </Button>
             </motion.div>
