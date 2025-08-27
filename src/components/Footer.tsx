@@ -7,10 +7,10 @@ export function Footer() {
 
   return (
     <footer className="bg-surface/50 border-t border-border/20">
-      <div className="container-max section-padding py-12">
-        <div className="grid md:grid-cols-3 gap-8 items-center">
-          {/* Logo & Copyright */}
-          <motion.div
+      {/* <div className="container-max section-padding py-12">
+        <div className="grid md:grid-cols-3 gap-8 items-center"> */}
+      {/* Logo & Copyright */}
+      {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -22,33 +22,33 @@ export function Footer() {
             <p className="text-sm text-muted-foreground">
               Full-Stack and Mobile Application Developer
             </p>
-          </motion.div>
+          </motion.div> */}
 
-          <motion.div
+      {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
             className="flex justify-center space-x-4"
-          ></motion.div>
+          ></motion.div> */}
 
-          {/* Copyright */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-center md:text-right"
-          >
-            <p className="text-sm text-muted-foreground flex items-center justify-center md:justify-end">
-              © {currentYear} Dagim Asrat
-            </p>
-            <p className="text-xs text-muted-foreground mt-1">
-              Built with React, Three.js & Tailwind CSS
-            </p>
-          </motion.div>
-        </div>
-      </div>
+      {/* Copyright */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2 }}
+        className="text-center md:text-center pb-2"
+      >
+        <p className="text-sm text-muted-foreground flex items-center justify-center md:justify-center">
+          © {currentYear} Dagim Asrat
+        </p>
+        <p className="text-xs text-muted-foreground mt-1">
+          Built with React, Three.js & Tailwind CSS
+        </p>
+      </motion.div>
+      {/* </div>
+      </div> */}
     </footer>
   );
 }
