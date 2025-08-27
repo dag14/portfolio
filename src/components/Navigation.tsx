@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Menu, X, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
+import avatar from "../assets/dagim-avatar.png";
 
 const navigationItems = [
   { name: "About", href: "#about" },
@@ -57,7 +58,7 @@ export function Navigation() {
               className="focus:outline-none"
             >
               <img
-                src="/src/assets/dagim-avatar.png"
+                src={avatar}
                 alt="Dagim Asrat"
                 className="w-8 h-8 rounded-full border-2 border-primary/20"
               />
