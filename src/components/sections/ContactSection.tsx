@@ -189,7 +189,7 @@ export function ContactSection() {
                   <div>
                     <p className="text-sm text-muted-foreground">Location</p>
                     <p className="font-medium text-foreground">
-                      Abera Gizwa St., Addis Ababa, Ethiopia
+                      Addis Ababa, Ethiopia
                     </p>
                   </div>
                 </motion.div>
