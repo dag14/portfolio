@@ -60,7 +60,7 @@ export function TestimonialsSection() {
   };
 
   return (
-    <section id="testimonials" className="py-20 lg:py-32 section-padding">
+    <section id="testimonials" className="py-20 lg:py-16 section-padding">
       <div className="container-max">
         <motion.div
           initial="hidden"

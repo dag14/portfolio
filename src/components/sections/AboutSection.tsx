@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import { Card, CardContent } from '@/components/ui/card';
-import { MapPin, Phone, Mail, Calendar } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { MapPin, Phone, Mail, Calendar } from "lucide-react";
 
 export function AboutSection() {
   const containerVariants = {
@@ -8,14 +8,14 @@ export function AboutSection() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0 }
+    visible: { opacity: 1, y: 0 },
   };
 
   return (
@@ -34,8 +34,8 @@ export function AboutSection() {
               About <span className="text-gradient">Me</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Passionate software developer with a strong foundation in systems engineering 
-              and modern web technologies
+              Passionate software developer with a strong foundation in systems
+              engineering and modern web technologies
             </p>
           </motion.div>
 
@@ -46,25 +46,33 @@ export function AboutSection() {
               <motion.div variants={itemVariants}>
                 <Card className="glass-morphism h-full">
                   <CardContent className="p-8">
-                    <h3 className="text-2xl font-bold mb-6 text-gradient">My Journey</h3>
+                    <h3 className="text-2xl font-bold mb-6 text-gradient">
+                      My Journey
+                    </h3>
                     <div className="space-y-4 text-muted-foreground leading-relaxed">
                       <p>
-                        I am an intermediate-level professional with a strong systems engineering and 
-                        software development background. My earlier experience with systems equipped me 
-                        with expertise in Active Directory, Microsoft Exchange Services, Network Security, 
-                        and Networking Devices configuration.
+                        I am an intermediate-level professional with a strong
+                        systems engineering and software development background.
+                        My earlier experience with systems equipped me with
+                        expertise in Active Directory, Microsoft Exchange
+                        Services, and Network Security.
                       </p>
                       <p>
-                        Transitioning to software development, I gained proficiency in frontend development 
-                        with React.js, mobile app development with Flutter, backend development with Django, 
-                        and cloud services with Azure. I also work with version control using Git/GitHub, 
-                        project management tools like Jira and ClickUp, and containerization with Docker.
+                        Transitioning to software development, I gained
+                        proficiency in frontend development with React.js,
+                        mobile app development with Flutter, backend development
+                        with Django, and cloud services with Azure. I also work
+                        with version control using Git/GitHub, project
+                        management tools like Jira and ClickUp, and
+                        containerization with Docker.
                       </p>
                       <p>
-                        My experience further includes deploying and managing applications on Azure, 
-                        configuring CI/CD pipelines, integrating hardware data via RS232 in Python, 
-                        and building self-hosted visualization dashboards with Apache Superset. 
-                        I am committed to continuous learning, collaboration, and adapting to new challenges.
+                        My experience further includes deploying and managing
+                        applications on Azure, configuring CI pipelines,
+                        integrating hardware data via RS232 in Python, and
+                        building self-hosted visualization dashboards with
+                        Apache Superset. I am committed to continuous learning,
+                        collaboration, and adapting to new challenges.
                       </p>
                     </div>
                   </CardContent>
@@ -75,11 +83,17 @@ export function AboutSection() {
               <motion.div variants={itemVariants}>
                 <Card className="glass-morphism h-full">
                   <CardContent className="p-8">
-                    <h3 className="text-2xl font-bold mb-6 text-gradient">Education</h3>
+                    <h3 className="text-2xl font-bold mb-6 text-gradient">
+                      Education
+                    </h3>
                     <div className="space-y-4">
                       <div className="border-l-2 border-primary pl-6 space-y-2">
-                        <h4 className="text-xl font-semibold">Bachelor of Science in Computer Engineering</h4>
-                        <p className="text-primary font-medium">Bahir Dar Institute of Technology</p>
+                        <h4 className="text-xl font-semibold">
+                          Bachelor of Science in Computer Engineering
+                        </h4>
+                        <p className="text-primary font-medium">
+                          Bahir Dar Institute of Technology
+                        </p>
                         <div className="flex items-center space-x-4 text-sm text-muted-foreground">
                           <div className="flex items-center space-x-1">
                             <MapPin className="h-4 w-4" />
@@ -91,9 +105,11 @@ export function AboutSection() {
                           </div>
                         </div>
                         <p className="text-sm text-muted-foreground mt-2">
-                          Developed strong skills in C++, Java, Python, data structures and algorithms, 
-                          software engineering, and computer networks. Enhanced abilities in software 
-                          documentation preparation, project collaboration, and soft skills.
+                          Developed strong skills in C++, Java, Python, data
+                          structures and algorithms, software engineering, and
+                          computer networks. Enhanced abilities in software
+                          documentation preparation, project collaboration, and
+                          soft skills.
                         </p>
                       </div>
                     </div>
@@ -101,7 +117,6 @@ export function AboutSection() {
                 </Card>
               </motion.div>
             </div>
-
           </div>
         </motion.div>
       </div>

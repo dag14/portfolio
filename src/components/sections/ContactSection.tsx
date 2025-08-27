@@ -124,7 +124,7 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 lg:py-10 section-padding">
+    <section id="contact" className="py-20 lg:py-16 section-padding">
       <div className="container-max">
         <motion.div
           initial="hidden"
