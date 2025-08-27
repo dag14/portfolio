@@ -71,11 +71,11 @@ export function TestimonialsSection() {
         >
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center space-y-4">
-            <h2 className="text-4xl lg:text-5xl font-display font-bold">
-              Client <span className="text-gradient">Testimonials</span>
+            <h2 className="text-4xl lg:text-5xl font-display font-bold text-gradient">
+              Testimonials
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              What clients and colleagues say about working with me
+              Testimonials from My Instructors and Technical Team Leads{" "}
             </p>
           </motion.div>
 

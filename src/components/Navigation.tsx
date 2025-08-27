@@ -1,15 +1,15 @@
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Menu, X, Download } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { ThemeToggle } from './ThemeToggle';
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Menu, X, Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navigationItems = [
-  { name: 'About', href: '#about' },
-  { name: 'Experience', href: '#experience' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Contact', href: '#contact' },
+  { name: "About", href: "#about" },
+  { name: "Experience", href: "#experience" },
+  { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export function Navigation() {
@@ -21,15 +21,15 @@ export function Navigation() {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleDownloadCV = () => {
     // I'll create a CV download link
-    const link = document.createElement('a');
-    link.href = '../../src/assets/Dagim_Asrat_CV.pdf'; 
-    link.download = 'Dagim_Asrat_CV.pdf';
+    const link = document.createElement("a");
+    link.href = "../../src/assets/Dagim_Asrat_CV.pdf";
+    link.download = "Dagim_Asrat_CV.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -40,9 +40,7 @@ export function Navigation() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'glass-morphism shadow-elegant' 
-          : 'bg-transparent'
+        isScrolled ? "glass-morphism shadow-elegant" : "bg-transparent"
       }`}
     >
       <div className="container-max section-padding">
@@ -54,11 +52,16 @@ export function Navigation() {
             transition={{ delay: 0.2 }}
             className="flex items-center"
           >
-            <img 
-              src="/src/assets/dagim-avatar.png" 
-              alt="Dagim Asrat" 
-              className="w-8 h-8 rounded-full border-2 border-primary/20"
-            />
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="focus:outline-none"
+            >
+              <img
+                src="/src/assets/dagim-avatar.png"
+                alt="Dagim Asrat"
+                className="w-8 h-8 rounded-full border-2 border-primary/20"
+              />
+            </button>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -87,7 +90,7 @@ export function Navigation() {
               <Download className="h-4 w-4" />
               <span>Download CV</span>
             </Button>
-            
+
             {/* Mobile Menu Button */}
             <Button
               variant="ghost"
@@ -95,7 +98,11 @@ export function Navigation() {
               className="md:hidden"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {isMobileMenuOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
             </Button>
           </div>
         </div>
@@ -104,7 +111,7 @@ export function Navigation() {
         {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden border-t border-border/20 pt-4 pb-4"
           >

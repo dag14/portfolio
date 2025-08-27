@@ -1,17 +1,17 @@
-import { Suspense } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Environment } from '@react-three/drei';
-import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { TechParticles } from '../three/TechParticles';
-import { FloatingGeometry } from '../three/FloatingGeometry';
-import { useTheme } from '../ThemeProvider';
-import {RxDiscordLogo } from 'react-icons/rx'
+import { Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Environment } from "@react-three/drei";
+import { motion } from "framer-motion";
+import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { TechParticles } from "../three/TechParticles";
+import { FloatingGeometry } from "../three/FloatingGeometry";
+import { useTheme } from "../ThemeProvider";
+import { RxDiscordLogo } from "react-icons/rx";
 
 export function HeroSection() {
   const { effectiveTheme } = useTheme();
-  const isDark = effectiveTheme === 'dark';
+  const isDark = effectiveTheme === "dark";
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -23,8 +23,8 @@ export function HeroSection() {
             <pointLight position={[10, 10, 10]} intensity={1} />
             <TechParticles isDark={isDark} />
             <FloatingGeometry />
-            <OrbitControls 
-              enableZoom={false} 
+            <OrbitControls
+              enableZoom={false}
               enablePan={false}
               autoRotate
               autoRotateSpeed={0.5}
@@ -37,7 +37,6 @@ export function HeroSection() {
       {/* Content Overlay */}
       <div className="relative z-10 container-max section-padding">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen pt-20">
-          
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -54,7 +53,7 @@ export function HeroSection() {
               >
                 Hello, I'm
               </motion.p>
-              
+
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -65,14 +64,14 @@ export function HeroSection() {
                 <br />
                 <span className="text-foreground">ASRAT</span>
               </motion.h1>
-              
+
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
                 className="text-xl lg:text-2xl text-muted-foreground font-medium"
               >
-                Software Developer
+                Full-Stack Developer
               </motion.p>
             </div>
 
@@ -82,9 +81,9 @@ export function HeroSection() {
               transition={{ delay: 0.8 }}
               className="text-lg text-muted-foreground leading-relaxed max-w-xl"
             >
-              Passionate about creating working solutions to real problems with React.js, 
-              Flutter, and cloud technologies. Experienced in building scalable applications 
-              that make a difference.
+              Passionate about creating working solutions to real problems with
+              React.js, Flutter, and cloud technologies. Experienced in building
+              scalable applications that make a difference.
             </motion.p>
 
             {/* Social Links */}
@@ -94,44 +93,40 @@ export function HeroSection() {
               transition={{ delay: 1 }}
               className="flex items-center space-x-4"
             >
-              <Button
-                size="icon"
-                variant="ghost"
-                className="btn-ghost"
-                asChild
-              >
-                <a href="mailto:dagimasrat3@gmail.com" target="_blank" rel="noopener noreferrer">
+              <Button size="icon" variant="ghost" className="btn-ghost" asChild>
+                <a
+                  href="mailto:dagimasrat3@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Mail className="h-5 w-5" />
                 </a>
               </Button>
-              <Button
-                size="icon"
-                variant="ghost"
-                className="btn-ghost"
-                asChild
-              >
-                <a href="https://www.linkedin.com/in/dagimasrat" target="_blank" rel="noopener noreferrer">
+              <Button size="icon" variant="ghost" className="btn-ghost" asChild>
+                <a
+                  href="https://www.linkedin.com/in/dagimasrat"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Linkedin className="h-5 w-5" />
                 </a>
               </Button>
-              <Button
-                size="icon"
-                variant="ghost"
-                className="btn-ghost"
-                asChild
-              >
-                <a href="https://github.com/dag14" target="_blank" rel="noopener noreferrer">
+              <Button size="icon" variant="ghost" className="btn-ghost" asChild>
+                <a
+                  href="https://github.com/dag14"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
-              <Button
-                size="icon"
-                variant="ghost"
-                className="btn-ghost"
-                asChild
-              >
-                <a href="https://discord.com/users/773498692888035339" target="_blank" rel="noopener noreferrer">
-                  <RxDiscordLogo  className="h-5 w-5" />
+              <Button size="icon" variant="ghost" className="btn-ghost" asChild>
+                <a
+                  href="https://discord.com/users/773498692888035339"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <RxDiscordLogo className="h-5 w-5" />
                 </a>
               </Button>
             </motion.div>
@@ -162,15 +157,21 @@ export function HeroSection() {
               <div className="w-96 h-96 rounded-full bg-gradient-hero backdrop-blur-sm border border-primary/20 flex items-center justify-center">
                 <div className="text-center space-y-4">
                   <div className="text-6xl font-bold text-gradient">4+</div>
-                  <div className="text-lg text-muted-foreground">Years of Development Experience</div>
+                  <div className="text-lg text-muted-foreground">
+                    Years of Development Experience
+                  </div>
                   <div className="grid grid-cols-2 gap-4 mt-8">
                     <div className="text-center">
                       <div className="text-2xl font-bold text-primary">6</div>
-                      <div className="text-sm text-muted-foreground">Projects</div>
+                      <div className="text-sm text-muted-foreground">
+                        Projects
+                      </div>
                     </div>
                     <div className="text-center">
                       <div className="text-2xl font-bold text-primary">10+</div>
-                      <div className="text-sm text-muted-foreground">Technologies</div>
+                      <div className="text-sm text-muted-foreground">
+                        Technologies
+                      </div>
                     </div>
                   </div>
                 </div>

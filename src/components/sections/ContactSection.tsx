@@ -218,89 +218,111 @@ export function ContactSection() {
                 <h4 className="font-semibold text-foreground">
                   Connect on Socials
                 </h4>
-                <div className="flex space-x-4">
+                <div className="grid grid-cols-2 gap-4">
                   <Button
-                    size="icon"
                     variant="ghost"
-                    className="btn-ghost"
+                    className="btn-ghost w-fit px-2 group flex items-center space-x-2 transition-all duration-300"
                     asChild
                   >
                     <a
                       href="https://www.linkedin.com/in/dagimasrat"
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="flex items-center space-x-2 group"
                     >
                       <Linkedin className="h-5 w-5" />
+                      <span className="text-sm max-w-0 overflow-hidden group-hover:max-w-[100px] transition-all duration-300 whitespace-nowrap">
+                        LinkedIn
+                      </span>
                     </a>
                   </Button>
                   <Button
-                    size="icon"
                     variant="ghost"
-                    className="btn-ghost"
-                    asChild
-                  >
-                    <a
-                      href="https://github.com/Bit-dagim"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Github className="h-5 w-5" />
-                    </a>
-                  </Button>
-                  <Button
-                    size="icon"
-                    variant="ghost"
-                    className="btn-ghost"
-                    asChild
-                  >
-                    <a
-                      href="https://github.com/dag14"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Github className="h-5 w-5" />
-                    </a>
-                  </Button>
-                  <Button
-                    size="icon"
-                    variant="ghost"
-                    className="btn-ghost"
-                    asChild
-                  >
-                    <a
-                      href="https://discord.com/users/773498692888035339"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <RxDiscordLogo className="h-5 w-5" />
-                    </a>
-                  </Button>
-                  <Button
-                    size="icon"
-                    variant="ghost"
-                    className="btn-ghost"
+                    className="btn-ghost w-fit px-2 group flex items-center space-x-2 transition-all duration-300"
                     asChild
                   >
                     <a
                       href="https://twitter.com/Dagim_AFC"
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="flex items-center space-x-2 group"
                     >
                       <Twitter className="h-5 w-5" />
+                      <span className="text-sm max-w-0 overflow-hidden group-hover:max-w-[100px] transition-all duration-300 whitespace-nowrap">
+                        Twitter
+                      </span>
                     </a>
                   </Button>
                   <Button
-                    size="icon"
                     variant="ghost"
-                    className="btn-ghost"
+                    className="btn-ghost w-fit px-2 group flex items-center space-x-2 transition-all duration-300"
+                    asChild
+                  >
+                    <a
+                      href="https://github.com/dag14"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 group"
+                    >
+                      <Github className="h-5 w-5" />
+                      <span className="text-sm max-w-0 overflow-hidden group-hover:max-w-[100px] transition-all duration-300 whitespace-nowrap">
+                        GitHub
+                      </span>
+                    </a>
+                  </Button>
+
+                  {/* Column 2: Discord, Twitter & Instagram */}
+                  <Button
+                    variant="ghost"
+                    className="btn-ghost w-fit px-2 group flex items-center space-x-2 transition-all duration-300"
+                    asChild
+                  >
+                    <a
+                      href="https://discord.com/users/773498692888035339"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 group"
+                    >
+                      <RxDiscordLogo className="h-5 w-5" />
+                      <span className="text-sm max-w-0 overflow-hidden group-hover:max-w-[100px] transition-all duration-300 whitespace-nowrap">
+                        Discord
+                      </span>
+                    </a>
+                  </Button>
+
+                  <Button
+                    variant="ghost"
+                    className="btn-ghost w-fit px-2 group flex items-center space-x-2 transition-all duration-300"
+                    asChild
+                  >
+                    <a
+                      href="https://github.com/Bit-dagim"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 group"
+                    >
+                      <Github className="h-5 w-5" />
+                      <span className="text-sm max-w-0 overflow-hidden group-hover:max-w-[100px] transition-all duration-300 whitespace-nowrap">
+                        GitHub (Alt)
+                      </span>
+                    </a>
+                  </Button>
+
+                  <Button
+                    variant="ghost"
+                    className="btn-ghost w-fit px-2 group flex items-center space-x-2 transition-all duration-300"
                     asChild
                   >
                     <a
                       href="https://www.instagram.com/dagim_afc/"
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="flex items-center space-x-2 group"
                     >
                       <Instagram className="h-5 w-5" />
+                      <span className="text-sm max-w-0 overflow-hidden group-hover:max-w-[100px] transition-all duration-300 whitespace-nowrap">
+                        Instagram
+                      </span>
                     </a>
                   </Button>
                 </div>
@@ -309,6 +331,54 @@ export function ContactSection() {
 
             {/* Call to Action */}
             <motion.div variants={itemVariants} className="space-y-8">
+              {/* Availability Status */}
+              {/* <Card className="glass-morphism">
+                <CardContent className="p-6">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-3 h-3 bg-success rounded-full animate-pulse"></div>
+                    <div>
+                      <p className="font-medium text-foreground">
+                        Available for new projects
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        Currently accepting new client work and collaboration
+                        opportunities
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card> */}
+
+              {/* Languages */}
+              <div className="space-y-6">
+                <Card className="glass-morphism">
+                  <CardContent className="p-6">
+                    <h4 className="font-semibold text-foreground mb-4">
+                      Languages
+                    </h4>
+                    <div className="space-y-3">
+                      <div className="flex justify-between items-center">
+                        <span className="font-medium">Amharic</span>
+                        <span className="text-sm text-muted-foreground">
+                          Native
+                        </span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="font-medium">English</span>
+                        <span className="text-sm text-muted-foreground">
+                          Fluent
+                        </span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="font-medium">German</span>
+                        <span className="text-sm text-muted-foreground">
+                          B1 Certified
+                        </span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
               <Card className="glass-morphism">
                 <CardContent className="p-8 text-center space-y-6">
                   <div className="space-y-4">
@@ -369,55 +439,6 @@ export function ContactSection() {
                   </form>
                 </CardContent>
               </Card>
-
-              {/* Availability Status */}
-              <Card className="glass-morphism">
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-success rounded-full animate-pulse"></div>
-                    <div>
-                      <p className="font-medium text-foreground">
-                        Available for new projects
-                      </p>
-                      <p className="text-sm text-muted-foreground">
-                        Currently accepting new client work and collaboration
-                        opportunities
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Languages */}
-              <div className="space-y-6">
-                <Card className="glass-morphism">
-                  <CardContent className="p-6">
-                    <h4 className="font-semibold text-foreground mb-4">
-                      Languages
-                    </h4>
-                    <div className="space-y-3">
-                      <div className="flex justify-between items-center">
-                        <span className="font-medium">Amharic</span>
-                        <span className="text-sm text-muted-foreground">
-                          Native
-                        </span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="font-medium">English</span>
-                        <span className="text-sm text-muted-foreground">
-                          Fluent
-                        </span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="font-medium">German</span>
-                        <span className="text-sm text-muted-foreground">
-                          B1 Certified
-                        </span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
             </motion.div>
           </div>
         </motion.div>

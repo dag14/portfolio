@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import { Heart, Github, Linkedin, Mail } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { motion } from "framer-motion";
+import { Heart, Github, Linkedin, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -20,7 +20,7 @@ export function Footer() {
               <span className="text-gradient">Dagim Asrat</span>
             </div>
             <p className="text-sm text-muted-foreground">
-              Software Developer & Systems Engineer
+              Full-Stack and Mobile Application Developer
             </p>
           </motion.div>
 
@@ -30,9 +30,7 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
             className="flex justify-center space-x-4"
-          >
-            
-          </motion.div>
+          ></motion.div>
 
           {/* Copyright */}
           <motion.div
@@ -42,7 +40,7 @@ export function Footer() {
             transition={{ delay: 0.2 }}
             className="text-center md:text-right"
           >
-            <p className="text-sm text-muted-foreground flex items-center justify-center md:justify-end"> 
+            <p className="text-sm text-muted-foreground flex items-center justify-center md:justify-end">
               © {currentYear} Dagim Asrat
             </p>
             <p className="text-xs text-muted-foreground mt-1">
