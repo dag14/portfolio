@@ -29,7 +29,7 @@ export function Navigation() {
   const handleDownloadCV = () => {
     // I'll create a CV download link
     const link = document.createElement("a");
-    link.href = "../../src/assets/Dagim_Asrat_CV.pdf";
+    link.href = "../../public/assets/Dagim_Asrat_CV.pdf";
     link.download = "Dagim_Asrat_CV.pdf";
     document.body.appendChild(link);
     link.click();
