@@ -4,7 +4,33 @@ import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const projects = [
+interface Project {
+  title: string;
+  description: string;
+  technologies: string[];
+  category: string;
+  featured: boolean;
+  externalUrl?: string;
+  githubUrl?: string;
+}
+
+const projects: Project[] = [
+  {
+    title: "Ahadu Lekulu Mobile Banking Application",
+    description:
+      "A secure, intuitive, and robust mobile banking application developed for Ahadu Bank, providing customers with convenient access to essential banking services. Engineered with a strong focus on mobile application security and seamless user experiences, the app delivers reliable financial transactions and smooth account operations through deep integration with the bank's core banking infrastructure.",
+    technologies: [
+      "Flutter",
+      "Riverpod",
+      "Mobile Application Security",
+      "Fintech",
+      "Integration",
+    ],
+    category: "Mobile Banking Application",
+    featured: true,
+    externalUrl:
+      "https://play.google.com/store/apps/details?id=com.ahadubank.retail&pcampaignid=web_share",
+  },
   {
     title: "Khat Taxation System",
     description:
@@ -123,20 +149,56 @@ export function ProjectsSection() {
                           </CardTitle>
                         </div>
                         <div className="flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                          <Button
-                            size="icon"
-                            variant="ghost"
-                            className="h-8 w-8"
-                          >
-                            <Github className="h-4 w-4" />
-                          </Button>
-                          <Button
-                            size="icon"
-                            variant="ghost"
-                            className="h-8 w-8"
-                          >
-                            <ExternalLink className="h-4 w-4" />
-                          </Button>
+                          {project.githubUrl ? (
+                            <Button
+                              size="icon"
+                              variant="ghost"
+                              className="h-8 w-8"
+                              asChild
+                            >
+                              <a
+                                href={project.githubUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={`${project.title} GitHub repository`}
+                              >
+                                <Github className="h-4 w-4" />
+                              </a>
+                            </Button>
+                          ) : (
+                            <Button
+                              size="icon"
+                              variant="ghost"
+                              className="h-8 w-8"
+                            >
+                              <Github className="h-4 w-4" />
+                            </Button>
+                          )}
+                          {project.externalUrl ? (
+                            <Button
+                              size="icon"
+                              variant="ghost"
+                              className="h-8 w-8"
+                              asChild
+                            >
+                              <a
+                                href={project.externalUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={`${project.title} external link`}
+                              >
+                                <ExternalLink className="h-4 w-4" />
+                              </a>
+                            </Button>
+                          ) : (
+                            <Button
+                              size="icon"
+                              variant="ghost"
+                              className="h-8 w-8"
+                            >
+                              <ExternalLink className="h-4 w-4" />
+                            </Button>
+                          )}
                         </div>
                       </div>
                     </CardHeader>
@@ -207,20 +269,56 @@ export function ProjectsSection() {
                             </div>
                           </div>
                           <div className="flex space-x-2 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity">
-                            <Button
-                              size="icon"
-                              variant="ghost"
-                              className="h-8 w-8"
-                            >
-                              <Github className="h-4 w-4" />
-                            </Button>
-                            <Button
-                              size="icon"
-                              variant="ghost"
-                              className="h-8 w-8"
-                            >
-                              <ExternalLink className="h-4 w-4" />
-                            </Button>
+                            {project.githubUrl ? (
+                              <Button
+                                size="icon"
+                                variant="ghost"
+                                className="h-8 w-8"
+                                asChild
+                              >
+                                <a
+                                  href={project.githubUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  aria-label={`${project.title} GitHub repository`}
+                                >
+                                  <Github className="h-4 w-4" />
+                                </a>
+                              </Button>
+                            ) : (
+                              <Button
+                                size="icon"
+                                variant="ghost"
+                                className="h-8 w-8"
+                              >
+                                <Github className="h-4 w-4" />
+                              </Button>
+                            )}
+                            {project.externalUrl ? (
+                              <Button
+                                size="icon"
+                                variant="ghost"
+                                className="h-8 w-8"
+                                asChild
+                              >
+                                <a
+                                  href={project.externalUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  aria-label={`${project.title} external link`}
+                                >
+                                  <ExternalLink className="h-4 w-4" />
+                                </a>
+                              </Button>
+                            ) : (
+                              <Button
+                                size="icon"
+                                variant="ghost"
+                                className="h-8 w-8"
+                              >
+                                <ExternalLink className="h-4 w-4" />
+                              </Button>
+                            )}
                           </div>
                         </div>
                       </CardContent>
