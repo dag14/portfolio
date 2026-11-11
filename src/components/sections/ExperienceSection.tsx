@@ -2,8 +2,82 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Building, Calendar, MapPin } from "lucide-react";
+import { differenceInYears } from "date-fns";
+
+interface Experience {
+  position: string;
+  organization: string;
+  location: string;
+  period: string;
+  description: string;
+  responsibilities: string[];
+  technologies: string[];
+}
+
+const experiences: Experience[] = [
+  {
+    position: "CORE Banking and Auxiliary Systems Officer",
+    organization: "Ahadu Bank",
+    location: "Addis Ababa",
+    period: "July 2025 – Present",
+    description:
+      "As a CORE Banking and Auxiliary Systems Officer, I design, develop, and maintain core banking and auxiliary software systems, lead mobile banking application development and Play Store management, and deliver robust API integrations.",
+    responsibilities: [
+      "Software System Development",
+      "Mobile Application Development",
+      "Google Play Store Account and Application Management",
+      "Mobile Banking Application Development",
+      "Software Maintenance and Customization",
+    ],
+    technologies: [
+      "React.js",
+      "Flutter",
+      "PostgreSQL",
+      "Apache Superset",
+      "NestJS",
+      "Git/GitLab",
+      "WSO2",
+      "Integration",
+      "Core Banking System",
+      "API Management",
+    ],
+  },
+  {
+    position: "Software Developer",
+    organization: "Brothers IT PLC",
+    location: "Addis Ababa",
+    period: "Apr 2023 - July 2025",
+    description:
+      "As a Software Developer, I design and implement software systems, develop frontend and backend solutions, and seamlessly integrate APIs. Additionally, I ensure efficient deployment by containerizing projects with Docker, enhancing scalability and consistency across environments.",
+    responsibilities: [
+      "Design and implement scalable software solutions",
+      "Manage Azure cloud infrastructure and ensure seamless system deployments",
+      "Configure and manage CI pipelines for automated integration workflows",
+      "Host data visualization tools and implement dashboards across different systems",
+      "Plan, schedule, and manage projects to ensure timely and efficient project execution.",
+      "Work with hardware integration like RS232-enabled weighing machines",
+    ],
+    technologies: [
+      "React.js",
+      "Django",
+      "Flutter",
+      "Azure",
+      "Docker",
+      "PostgreSQL",
+      "Apache Superset",
+      "CI/CD",
+      "Python",
+      "JavaScript",
+      "Git/GitHub",
+    ],
+  },
+];
+
+const START_DATE = new Date(2023, 3, 1); // April 2023
 
 export function ExperienceSection() {
+  const yearsOfExperience = differenceInYears(new Date(), START_DATE);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -49,110 +123,74 @@ export function ExperienceSection() {
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-accent-hover"></div>
 
             <div className="space-y-12">
-              {/* Current Position */}
-              <div className="relative">
-                {/* Timeline Dot */}
-                <div className="absolute left-6 w-4 h-4 bg-primary rounded-full border-4 border-background shadow-glow"></div>
+              {experiences.map((exp) => (
+                <div key={exp.organization} className="relative">
+                  {/* Timeline Dot */}
+                  <div className="absolute left-6 w-4 h-4 bg-primary rounded-full border-4 border-background shadow-glow"></div>
 
-                <Card className="ml-16 glass-morphism hover:shadow-elegant transition-all duration-300">
-                  <CardContent className="p-8">
-                    <div className="flex flex-col lg:flex-row lg:items-center justify-between mb-6">
-                      <div>
-                        <h3 className="text-2xl font-bold text-gradient mb-2">
-                          Software Developer
-                        </h3>
-                        <div className="flex items-center space-x-4 text-muted-foreground">
-                          <div className="flex items-center space-x-1">
-                            <Building className="h-4 w-4" />
-                            <span className="font-medium">Brothers IT PLC</span>
+                  <Card className="ml-16 glass-morphism hover:shadow-elegant transition-all duration-300">
+                    <CardContent className="p-8">
+                      <div className="flex flex-col lg:flex-row lg:items-center justify-between mb-6">
+                        <div>
+                          <h3 className="text-2xl font-bold text-gradient mb-2">
+                            {exp.position}
+                          </h3>
+                          <div className="flex items-center space-x-4 text-muted-foreground">
+                            <div className="flex items-center space-x-1">
+                              <Building className="h-4 w-4" />
+                              <span className="font-medium">{exp.organization}</span>
+                            </div>
+                            <div className="flex items-center space-x-1">
+                              <MapPin className="h-4 w-4" />
+                              <span>{exp.location}</span>
+                            </div>
                           </div>
-                          <div className="flex items-center space-x-1">
-                            <MapPin className="h-4 w-4" />
-                            <span>Addis Ababa</span>
+                        </div>
+                        <div className="flex items-center space-x-2 mt-4 lg:mt-0">
+                          <Calendar className="h-4 w-4 text-muted-foreground" />
+                          <Badge variant="secondary" className="text-primary">
+                            {exp.period}
+                          </Badge>
+                        </div>
+                      </div>
+
+                      <div className="space-y-4">
+                        <p className="text-muted-foreground leading-relaxed">
+                          {exp.description}
+                        </p>
+
+                        <div className="space-y-3">
+                          <h4 className="font-semibold text-foreground">
+                            Key Responsibilities:
+                          </h4>
+                          <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
+                            {exp.responsibilities.map((resp) => (
+                              <li key={resp}>{resp}</li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div className="pt-4">
+                          <h4 className="font-semibold text-foreground mb-3">
+                            Technologies Used:
+                          </h4>
+                          <div className="flex flex-wrap gap-2">
+                            {exp.technologies.map((tech) => (
+                              <Badge
+                                key={tech}
+                                variant="outline"
+                                className="bg-primary/5 border-primary/20"
+                              >
+                                {tech}
+                              </Badge>
+                            ))}
                           </div>
                         </div>
                       </div>
-                      <div className="flex items-center space-x-2 mt-4 lg:mt-0">
-                        <Calendar className="h-4 w-4 text-muted-foreground" />
-                        <Badge variant="secondary" className="text-primary">
-                          Apr 2023 - Present
-                        </Badge>
-                      </div>
-                    </div>
-
-                    <div className="space-y-4">
-                      <p className="text-muted-foreground leading-relaxed">
-                        As a Software Developer, I design and implement software
-                        systems, develop frontend and backend solutions, and
-                        seamlessly integrate APIs. Additionally, I ensure
-                        efficient deployment by containerizing projects with
-                        Docker, enhancing scalability and consistency across
-                        environments.
-                      </p>
-
-                      <div className="space-y-3">
-                        <h4 className="font-semibold text-foreground">
-                          Key Responsibilities:
-                        </h4>
-                        <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
-                          <li>
-                            Design and implement scalable software solutions
-                          </li>
-                          <li>
-                            Manage Azure cloud infrastructure and ensure
-                            seamless system deployments
-                          </li>
-                          <li>
-                            Configure and manage CI pipelines for automated
-                            integration workflows
-                          </li>
-                          <li>
-                            Host data visualization tools and implement
-                            dashboards across different systems
-                          </li>
-                          <li>
-                            Plan, schedule, and manage projects to ensure timely
-                            and efficient project execution.
-                          </li>
-                          <li>
-                            Work with hardware integration like RS232-enabled
-                            weighing machines
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div className="pt-4">
-                        <h4 className="font-semibold text-foreground mb-3">
-                          Technologies Used:
-                        </h4>
-                        <div className="flex flex-wrap gap-2">
-                          {[
-                            "React.js",
-                            "Django",
-                            "Flutter",
-                            "Azure",
-                            "Docker",
-                            "PostgreSQL",
-                            "Apache Superset",
-                            "CI/CD",
-                            "Python",
-                            "JavaScript",
-                            "Git/GitHub",
-                          ].map((tech) => (
-                            <Badge
-                              key={tech}
-                              variant="outline"
-                              className="bg-primary/5 border-primary/20"
-                            >
-                              {tech}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              ))}
             </div>
           </motion.div>
 
@@ -163,7 +201,9 @@ export function ExperienceSection() {
           >
             <Card className="glass-morphism text-center group hover:scale-105 transition-transform duration-300">
               <CardContent className="p-6">
-                <div className="text-3xl font-bold text-gradient mb-2">2+</div>
+                <div className="text-3xl font-bold text-gradient mb-2">
+                  {yearsOfExperience}+
+                </div>
                 <p className="text-muted-foreground">
                   Years of Professional Experience
                 </p>
@@ -172,7 +212,7 @@ export function ExperienceSection() {
 
             <Card className="glass-morphism text-center group hover:scale-105 transition-transform duration-300">
               <CardContent className="p-6">
-                <div className="text-3xl font-bold text-gradient mb-2">5</div>
+                <div className="text-3xl font-bold text-gradient mb-2">7</div>
                 <p className="text-muted-foreground">
                   Real World Projects Completed
                 </p>

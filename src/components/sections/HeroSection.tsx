@@ -8,10 +8,14 @@ import { TechParticles } from "../three/TechParticles";
 import { FloatingGeometry } from "../three/FloatingGeometry";
 import { useTheme } from "../ThemeProvider";
 import { RxDiscordLogo } from "react-icons/rx";
+import { differenceInYears } from "date-fns";
+
+const DEV_START_DATE = new Date(2019, 0, 1); // 2019
 
 export function HeroSection() {
   const { effectiveTheme } = useTheme();
   const isDark = effectiveTheme === "dark";
+  const devYearsOfExperience = differenceInYears(new Date(), DEV_START_DATE);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -156,13 +160,15 @@ export function HeroSection() {
             <div className="relative">
               <div className="w-96 h-96 rounded-full bg-gradient-hero backdrop-blur-sm border border-primary/20 flex items-center justify-center">
                 <div className="text-center space-y-4">
-                  <div className="text-6xl font-bold text-gradient">4+</div>
+                  <div className="text-6xl font-bold text-gradient">
+                    {devYearsOfExperience}+
+                  </div>
                   <div className="text-lg text-muted-foreground">
                     Years of Development Experience
                   </div>
                   <div className="grid grid-cols-2 gap-4 mt-8">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-primary">6</div>
+                      <div className="text-2xl font-bold text-primary">7</div>
                       <div className="text-sm text-muted-foreground">
                         Projects
                       </div>
